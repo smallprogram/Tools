@@ -143,15 +143,23 @@ namespace FilesRanameTool
                     if (file.Exists)
                     {
                         // Move file with a new name. Hence renamed.  
-                        file.MoveTo(@$"{file.DirectoryName}\{NewName}.{tb_exname.Text}");
+                        file.MoveTo(@$"{file.DirectoryName}\{NewName}.{tb_exname.Text}",true);
                     }
 
-
-
+                    ////滚动条自动下拉
+                    ////设置光标的位置到文本尾   
+                    //rtb_log.Select(rtb_log.TextLength, 0);
+                    ////滚动到控件光标处   
+                    //rtb_log.ScrollToCaret();
 
                     rtb_log.Text += $"已将文件 {OldName} 重命名为 {NewName}.{tb_exname.Text} \r\n";
                 }
                 rtb_log.Text += $"重命名完毕！ \r\n";
+                ////滚动条自动下拉
+                ////设置光标的位置到文本尾   
+                //rtb_log.Select(rtb_log.TextLength, 0);
+                ////滚动到控件光标处   
+                //rtb_log.ScrollToCaret();
             }
             else
             {
@@ -172,12 +180,22 @@ namespace FilesRanameTool
                     if (files[f].Exists)
                     {
                         // Move file with a new name. Hence renamed.  
-                        files[f].MoveTo(@$"{files[f].DirectoryName}\{NewName}.{tb_exname.Text}");
+                        files[f].MoveTo(@$"{files[f].DirectoryName}\{NewName}.{tb_exname.Text}", true);
                     }
 
                     rtb_log.Text += $"已将文件 {OldName} 重命名为 {NewName}.{tb_exname.Text} \r\n";
+                    ////滚动条自动下拉
+                    ////设置光标的位置到文本尾   
+                    //rtb_log.Select(rtb_log.TextLength, 0);
+                    ////滚动到控件光标处   
+                    //rtb_log.ScrollToCaret();
                 }
                 rtb_log.Text += $"重命名完毕！ \r\n";
+                ////滚动条自动下拉
+                ////设置光标的位置到文本尾   
+                //rtb_log.Select(rtb_log.TextLength, 0);
+                ////滚动到控件光标处   
+                //rtb_log.ScrollToCaret();
             }
 
             
